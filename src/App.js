@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import './App.css';
 import Header from './components/Header'
+import Students from './components/Students'
 
 
 class App extends Component {
@@ -30,13 +31,8 @@ class App extends Component {
           <Header/>
            <h1>Form the header</h1>
            <h2>{this.state.siteTitle}</h2>
-
-            {
-              this.state.informations.map((information) =>(
-              <li>ID: {information.id}<br/>Name: {information.name}<br/>Description: {information.description}<br/></li>
-
-              ))
-            }
+<Students studentId={this.state.informations}/>
+            
            </div>
         )
     }
